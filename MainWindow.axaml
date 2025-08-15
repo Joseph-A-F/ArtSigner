@@ -1,0 +1,27 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" 
+        Width ="500"
+        Height ="800"
+        x:Class="ArtSigner.MainWindow"
+        CanResize="False"
+        Title="ArtSigner">
+    <StackPanel>
+        <Label Content="ArtSigner" HorizontalAlignment="Center" FontSize="30" Margin="50"/> 
+        <!-- <Label Content="Hi!" HorizontalAlignment="Center" FontSize="30" Margin="50"/>  -->
+        <!-- <TextBlock  Text="A program that " TextWrapping="Wrap" VerticalAlignment="Center" HorizontalAlignment="Center" TextAlignment="Center" Margin="20"/> -->
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="20">
+                <TextBlock Text="Select your art folder:" VerticalAlignment="Center" Margin="5"/>
+                <Button Content="Working Directory" VerticalAlignment="Center" Margin="5"  Click="GetWorkingDirectory"/>
+        </StackPanel>
+        <TextBlock  Text="Write what you want to be overlayed on your art as a watermark here:" TextWrapping="Wrap" VerticalAlignment="Center" HorizontalAlignment="Center" TextAlignment="Center" Margin="20"/>
+        <TextBox Name="NameTextBox" Text="Your Name" Height="120" Margin="30"/>
+        <!-- <Slider /> -->
+        <!-- <TextBox Height="120" Margin="30"/> -->
+        <TextBlock Name="NumberOfImages" HorizontalAlignment="Center" Text="Number of Images that will be Generated"/>
+        <Button Click="StartGenerating" Content="Generate" HorizontalAlignment="Center" Margin="30" FontSize="30"/>
+        <!-- <TextBlock  Text="Write your name or whatever you want to be overlayed on your art here:" TextWrapping="Wrap" VerticalAlignment="Center" HorizontalAlignment="Center" TextAlignment="Center" Margin="20"/> -->
+</StackPanel> 
+</Window>

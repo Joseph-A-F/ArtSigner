@@ -1,0 +1,23 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"        
+        mc:Ignorable="d" 
+        d:DesignWidth="800"
+        d:DesignHeight="450"
+
+        Height = "500"
+        Width ="800"
+        CanResize="False"
+        x:Class="ArtSigner.WorkerWindow"
+        Title="Generating..">
+  <!-- Welcome to Avalonia! -->
+  <StackPanel>
+    <TextBlock x:Name="CurrentName" TextWrapping="Wrap" Text="Reading..." FontSize="30" Margin="100" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+    <!-- <Label Content="Reading... " FontSize="30" Margin="100" HorizontalAlignment="Center" VerticalAlignment="Center"/> -->
+    <!-- <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center"> -->
+    <Image Name="PreviewImage" />
+    <!-- </StackPanel> -->
+    <!-- <Label Content="Hello"/> -->
+  </StackPanel>
+</Window>
