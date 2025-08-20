@@ -75,6 +75,7 @@ public partial class MainWindow : Window
     {
         // WorkerWindow worker = 
         // worker.Show();
+        this.update_counter();
         if (worker is { IsVisible: true })
         {
             worker.Close();
@@ -82,19 +83,13 @@ public partial class MainWindow : Window
 
         worker = new WorkerWindow();
         worker.Show(this);
-        // while (!worker.IsActive) { }
-        System.Console.WriteLine("active..");
-        worker.SetTextContent(this.NameTextBox);
+
+        worker.SetTextContent(this.NameTextBox.Text);
         worker.load_images(images.ToList());
         worker.working_directory = this.path_of_working_directory;
         await worker.RunAsync();
-        // await Task.Delay(100);
-        // await worker.run_async();
+        this.NumberOfImages.Text += "\nCompleted!";
 
-        // while (true)
-        // {
-        // }
-        // worker.ShowDialog(this);
     }
 
 
